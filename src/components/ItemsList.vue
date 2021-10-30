@@ -18,7 +18,7 @@
   </div>
 </template>
 <script>
-import { mapState } from 'vuex'
+//import { mapState } from 'vuex'
 import ModalWindow from '@/components/ModalWindow'
 
 export default {
@@ -28,9 +28,12 @@ export default {
     selectedItem: {},
   }),
   computed:  {
-    ...mapState({
+    /*...mapState({
       Items: state => state.items.all
-    }),
+    }),*/
+    Items() {
+      return this.$store.state.items.all
+    }
   },
   methods: {
     editPrice(value) {
